@@ -1,0 +1,20 @@
+//Global Execution context
+//this 
+
+//Function execution context
+/*1=Memory creation phase
+compile line by line
+all declared variables are undefined
+functions->def
+
+2=Execution Phase
+val1=10
+val2=5
+fun call->--------------------------
+                !                   !
+    New variable Envornment        Execution Thread
+                                        !
+                                 -------------
+                                !             !
+            (undefined)Memory creation phase   Execution context(val assign)
+*/

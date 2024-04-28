@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM edit and remove elements</title>
+</head>
+<body>
+    <ul class="li_element">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addLan(lan)
+    {
+        const newli=document.createElement('li')
+        newli.innerHTML=lan
+        document.querySelector('.li_element').append(newli)
+    }
+    addLan("cpp")
+    addLan("Python")
+    //Optimized approach not whole traversal to append
+    function addLanOpt(lan)
+    {
+        const newli=document.createElement('li')
+        newli.append(document.createTextNode(lan))
+        document.querySelector('ul').appendChild(newli)
+    }
+    addLanOpt("c")
+    //Edit 
+    const temp=document.querySelector('ul')
+    const li=temp.children[2]
+    const newli=document.createElement('li')
+    newli.innerHTML="JAva"
+    li.replaceWith(newli)
+    //remove
+    const t=document.querySelector('ul')
+    const l=temp.children[3]
+    l.remove();
+    
+    </script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Changer</title>
+    <link rel="stylesheet" href="color.css">
+</head>
+<body class="whole">
+    <h1>Colour Switcher</h1>
+<div class="but">
+    <button class="inner" id="grey"></button>
+    <button class="inner" id="red"></button>
+    <button class="inner" id="blue"></button>
+    <button class="inner" id="yellow"></button>
+  </div>  
+  <h2>Click on any of the Colour to change background Colour </h2>
+</body>
+<script>
+    //e is th object 
+    buttons=document.querySelectorAll('.inner');
+    body=document.querySelector('body')
+    //It will return nodelist of 4 buttons
+    //Eventlistner on each button
+    buttons.forEach((button)=>
+    {
+        button.addEventListener('click',(e)=>
+        {
+            if(e.target.id=="grey")
+            {
+                body.style.backgroundColor="grey";
+            }
+            
+            if(e.target.id=="red")
+            {
+                body.style.backgroundColor="red";
+            }
+            
+            if(e.target.id=="blue")
+            {
+                body.style.backgroundColor="blue"
+            }
+            
+            if(e.target.id=="yellow")
+            {
+                body.style.backgroundColor="yellow";
+            }
+        })
+    })
+
+</script>
+</html>

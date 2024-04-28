@@ -1,0 +1,28 @@
+#center
+{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+span{
+    font-weight: bolder;
+    font-size:xx-large;
+}
+body{
+    background-color: black;
+    color: white;
+}
+.clock
+{
+    background-color: rgb(177, 194, 23);
+    padding:20px 60px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size:40px;
+}
+.text
+{
+    font-size:x-large;
+}

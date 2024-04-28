@@ -1,0 +1,31 @@
+.whole
+{
+    margin:10px ; 
+}
+@media screen and (max-width: 600px) {
+    .but {
+        flex-wrap: wrap;
+    }
+}
+.inner
+{
+    margin:10px 10px;
+    width:100px;
+    height: 100px;
+}
+#grey
+{
+    background-color: grey;
+}
+#red
+{
+    background-color: red;
+}
+#blue
+{
+    background-color:blue
+}
+#yellow
+{
+    background-color:yellow;
+}

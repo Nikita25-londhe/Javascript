@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+</head>
+<body style="background-Color:rgb(236, 171, 171);color:green">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Sunday</div>
+    </div>
+</body>
+<script>
+    
+    const temp=document.querySelector('.parent')    
+    for(let i=0;i<temp.children.length;i++)
+    {
+        (temp.children[i])
+    }
+    temp.children[1].style.color="red";
+    temp.children[0].style.color="Yellow";
+    /*console.log(temp.firstElementChild.parentElement)//parent
+    console.log(temp.firstElementChild.nextElementSibling)//Tuesday
+    console.log(temp.childNodes)*/
+    //---------------How to create New element---------
+    const newdiv=document.createElement('div')
+    console.log(newdiv)
+    newdiv.className="myclass"
+    newdiv.id="myID"
+    newdiv.style.backgroundColor="green"
+    newdiv.style.padding="15px"
+    newdiv.setAttribute("title","MyTitle")
+    newdiv.style.color="white"
+    //newdiv.innerText="Hello NIkita"
+    Addtext=(document.createTextNode("Hello NIkita"))
+    newdiv.appendChild(Addtext)
+    document.body.appendChild(newdiv)
+
+
+
+</script>
+</html>
