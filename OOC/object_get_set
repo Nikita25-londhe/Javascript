@@ -1,0 +1,16 @@
+const user=
+{
+    //Whwn private var use # or _
+    email:'abd@gmail.com',
+    password:12,
+    get email()
+    {
+        return this._email+"encrypt";
+    },
+    set email(val)
+    {
+        this._email=val;
+    }
+}
+const t=Objct.create(user);
+console.log(t.email);

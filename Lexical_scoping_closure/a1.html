@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function outer()
+    {
+        let name="maya";
+        function inner()
+        {
+            console.log(name);
+        }
+        inner();
+    }
+    outer();
+    /*the inner() function has no local variables of its own. However, since inner functions have access to the variables of outer functions, inner() can access the variable name declared in the parent function, init().*/
+    function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+          console.log(name);
+        }
+        return displayName;/*Return with its lexical scope means also its outer context hence name become available */
+      }
+      
+      const myFunc = makeFunc();
+      myFunc();
+      
+</script>
+</html>

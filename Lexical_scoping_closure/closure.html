@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    orange=document.querySelector('#orange');
+    grren=document.querySelector('#orange')
+    function clickhandler(color)
+    {
+        return function()
+        {
+            document.querySelector('body').style.backgroundColor=`${color}`;
+        }
+    }
+    orange.onclick=(clickhandler("orange"))
+    /*when we pass the clickhandler() then it will get directly
+    execute without clicking on button so we return refernce of that 
+    fun and because of closure color parameter is also available*/ 
+    green.onclick=(clickhandler("green"))
+</script>
+</html>
