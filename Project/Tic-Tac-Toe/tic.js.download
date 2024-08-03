@@ -1,0 +1,50 @@
+let buttons = document.querySelectorAll("button");
+let pl = "X";
+let winpattern=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],
+[0,4,8],[2,4,6]];
+
+
+const restart=()=>
+{
+    buttons.forEach(button=>
+        {
+            button.innerText="";
+        })
+}
+const checkwinner=()=>
+{
+    for(pattern of winpattern)
+    {
+        if(buttons[pattern[0]].innerText=="X" && buttons[pattern[1]].innerText=="X"
+        && buttons[pattern[2]].innerText=="X")
+        {
+            alert("X is winner");
+            restart();
+            return;
+        }
+        if(buttons[pattern[0]].innerText=="O" && buttons[pattern[1]].innerText=="O"
+        && buttons[pattern[2]].innerText=="O")
+        {
+            alert("O is winner");
+            restart();
+            return;
+        }
+    }
+}
+buttons.forEach(button => {
+    button.onclick = () => {
+        if (button.innerText === "X" || button.innerText === "O") {
+            alert("This place is already filled");
+            return;
+        }
+        
+        if (pl === "X") {
+            button.innerText = "X";
+            pl = "O";
+        } else {
+            button.innerText = "O";
+            pl = "X";
+        }
+        checkwinner();
+    };
+});
