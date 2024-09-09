@@ -10,7 +10,9 @@ console.log(function (a,b)
     console.log("Hello");
 }())
 /*function doesn't having any name
-The variable greet is used to store the function*/
+The variable greet is used to store the function
+function expression->function is assigned to some variable for eg-greet=function()
+mostly used with anonymous but can be use with named function also*/
 greet=function()
 {
   console.log("Hello");
