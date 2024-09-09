@@ -1,0 +1,17 @@
+/*The function doesn't having any name are called anonymous*/
+//With parameter
+console.log(function (a,b)
+{
+    return a*b;
+}(4,5));
+//without parameter
+(function()
+{
+    console.log("Hello");
+}())
+/*function doesn't having any name
+The variable greet is used to store the function*/
+greet=function()
+{
+  console.log("Hello");
+}
